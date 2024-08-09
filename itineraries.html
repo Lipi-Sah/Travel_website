@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover curated travel itineraries for every type of traveler.">
+    <title>Travel Itineraries</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .itineraries {
+            text-align: center;
+        }
+
+        .itineraries h1 {
+            color: #333;
+        }
+
+        .itinerary-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .itinerary {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .itinerary img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .itinerary h3 {
+            margin: 10px;
+            color: #d9534f;
+        }
+
+        .itinerary p {
+            margin: 0 10px 10px;
+            color: #555;
+        }
+
+        .itinerary:hover {
+            transform: scale(1.05);
+        }
+
+        .places-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .places-table th, .places-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .places-table th {
+            background-color: #333;
+            color: white;
+        }
+
+        .places-table td {
+            background-color: #fff;
+        }
+
+        .transport {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .transport h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .transport-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .transport-item {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 250px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .transport-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .transport-item h3 {
+            margin: 10px 0;
+            color: #d9534f;
+        }
+
+        .transport-item p {
+            margin: 0;
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-media {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-media li {
+            margin: 0 10px;
+        }
+
+        .social-media li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .social-media li a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination-guides.html">Destination Guides</a></li>
+                <li><a href="itineraries.html">Itineraries</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="itineraries">
+            <h1>Travel Itineraries</h1>
+            <div class="itinerary-grid">
+                
+                <div class="itinerary">
+                    <img src="assets/images/itinerary.jpg" alt="Itinerary 1">
+                    <h3>Itinerary :</h3>
+                    <p>Overview of the itinerary including key destinations and activities.</p>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Table for Places -->
+        <section class="places">
+            <h2>Popular Travel Destinations</h2>
+            <table class="places-table">
+                <thead>
+                    <tr>
+                        <th>Destination</th>
+                        <th>Distance</th>
+                        <th>Price (₹)</th>
+                        <th>Transport Options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Delhi</td>
+                        <td>1000 km</td>
+                        <td>2000</td>
+                        <td>
+                            <div class="transport-grid">
+                                <div class="transport-item">
+                                    <img src="assets/images/plane.jpeg" alt="Plane">
+                                    <h3>Plane</h3>
+                                    <p>₹2500</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/train.jpg" alt="Train">
+                                    <h3>Train</h3>
+                                    <p>₹1500</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/bus.jpeg" alt="Bus">
+                                    <h3>Bus</h3>
+                                    <p>₹800</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/car.jpg" alt="Car">
+                                    <h3>Car</h3>
+                                    <p>₹2000</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Mumbai</td>
+                        <td>500 km</td>
+                        <td>2500</td>
+                        <td>
+                            <div class="transport-grid">
+                                <div class="transport-item">
+                                    <img src="assets/images/plane.jpeg" alt="Plane">
+                                    <h3>Plane</h3>
+                                    <p>₹5000</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/train.jpg" alt="Train">
+                                    <h3>Train</h3>
+                                    <p>₹1200</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/bus.jpeg" alt="Bus">
+                                    <h3>Bus</h3>
+                                    <p>₹1900</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/car.jpg" alt="Car">
+                                    <h3>Car</h3>
+                                    <p>₹3000</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Uttarakhand</td>
+                        <td>600 km</td>
+                        <td>4000</td>
+                        <td>
+                            <div class="transport-grid">
+                                <div class="transport-item">
+                                    <img src="assets/images/plane.jpeg" alt="Plane">
+                                    <h3>Plane</h3>
+                                    <p>₹8000</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/train.jpg" alt="Train">
+                                    <h3>Train</h3>
+                                    <p>₹2500</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/bus.jpeg" alt="Bus">
+                                    <h3>Bus</h3>
+                                    <p>₹2467</p>
+                                </div>
+                                <div class="transport-item">
+                                    <img src="assets/images/car.jpg" alt="Car">
+                                    <h3>Car</h3>
+                                    <p>₹6500</p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Website. All rights reserved.</p>
+        <ul class="social-media">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+    
+    <script>
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Page loaded and ready!');
+        });
+    </script>
+</body>
+</html>

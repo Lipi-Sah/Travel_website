@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find in-depth guides to the world's most beautiful travel destinations.">
+    <title>Destination Guides</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .guides {
+            text-align: center;
+        }
+
+        .guides h1 {
+            color: #333;
+        }
+
+        .guide-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .guide {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .guide img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .guide h3 {
+            margin: 10px;
+            color: #d9534f;
+        }
+
+        .guide p {
+            margin: 0 10px 10px;
+            color: #555;
+        }
+
+        .guide .price {
+            color: #d9534f;
+            font-weight: bold;
+        }
+
+        .guide .distance {
+            color: #777;
+        }
+
+        .guide:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-media {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-media li {
+            margin: 0 10px;
+        }
+
+        .social-media li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .social-media li a:hover {
+            color: #ddd;
+        }
+
+        .dropdown-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .dropdown-container select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+    </style>
+    <!-- Include Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination-guides.html">Destination Guides</a></li>
+                <li><a href="itineraries.html">Itineraries</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="guides">
+            <h1>Destination Guides</h1>
+
+            <!-- Dropdown Menu -->
+            <div class="dropdown-container">
+                <label for="places">Select the place you want to visit:</label>
+                <select id="places" onchange="showDetails(this.value)">
+                    <option value="">--Select a Place--</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Chennai">Chennai</option>
+                    <option value="Kolkata">Kolkata</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Jaipur">Jaipur</option>
+                    <option value="Agra">Agra</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="Varanasi">Varanasi</option>
+                    <option value="Goa">Goa</option>
+                </select>
+            </div>
+
+            <div class="guide-grid">
+                <div class="guide" onclick="showDetails('Delhi')">
+                    <img src="assets/images/delhi.jpg" alt="Delhi">
+                    <h3>Delhi</h3>
+                    <p>Price: <span class="price">₹2000</span></p>
+                    <p>Distance: <span class="distance">1000 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Mumbai')">
+                    <img src="assets/images/mumbai.webp" alt="Mumbai">
+                    <h3>Mumbai</h3>
+                    <p>Price: <span class="price">₹2500</span></p>
+                    <p>Distance: <span class="distance">500 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Chennai')">
+                    <img src="assets/images/chennai.jpg" alt="Chennai">
+                    <h3>Chennai</h3>
+                    <p>Price: <span class="price">₹3000</span></p>
+                    <p>Distance: <span class="distance">1200 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Kolkata')">
+                    <img src="assets/images/kolkata.jpg" alt="Kolkata">
+                    <h3>Kolkata</h3>
+                    <p>Price: <span class="price">₹2200</span></p>
+                    <p>Distance: <span class="distance">800 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Bangalore')">
+                    <img src="assets/images/bangalore.jpg" alt="Bangalore">
+                    <h3>Bangalore</h3>
+                    <p>Price: <span class="price">₹2700</span></p>
+                    <p>Distance: <span class="distance">900 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Hyderabad')">
+                    <img src="assets/images/hyderabad.jpeg" alt="Hyderabad">
+                    <h3>Hyderabad</h3>
+                    <p>Price: <span class="price">₹2400</span></p>
+                    <p>Distance: <span class="distance">1100 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Jaipur')">
+                    <img src="assets/images/jaipur.jpg" alt="Jaipur">
+                    <h3>Jaipur</h3>
+                    <p>Price: <span class="price">₹2100</span></p>
+                    <p>Distance: <span class="distance">700 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Agra')">
+                    <img src="assets/images/agra.jpeg" alt="Agra">
+                    <h3>Agra</h3>
+                    <p>Price: <span class="price">₹1800</span></p>
+                    <p>Distance: <span class="distance">300 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Uttarakhand')">
+                    <img src="assets/images/Uttarakhand.jpg" alt="Uttarakhand">
+                    <h3>Uttarakhand</h3>
+                    <p>Price: <span class="price">₹4000</span></p>
+                    <p>Distance: <span class="distance">600 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Varanasi')">
+                    <img src="assets/images/varanasi.jpg" alt="Varanasi">
+                    <h3>Varanasi</h3>
+                    <p>Price: <span class="price">₹2000</span></p>
+                    <p>Distance: <span class="distance">1500 km</span></p>
+                </div>
+                <div class="guide" onclick="showDetails('Goa')">
+                    <img src="assets/images/goa.jpeg" alt="Goa">
+                    <h3>Goa</h3>
+                    <p>Price: <span class="price">₹3500</span></p>
+                    <p>Distance: <span class="distance">1000 km</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Website. All rights reserved.</p>
+        <ul class="social-media">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        function showDetails(place) {
+            alert(`Details about ${place}`);
+        }
+    </script>
+</body>
+</html>

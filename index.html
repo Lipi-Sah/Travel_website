@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world with our comprehensive travel guides, itineraries, and booking options.">
+    <title>Travel Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero {
+            background: url('assets/images/b.jpg') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .cta-button:hover {
+            background-color: #e55d50;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .social-media {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .social-media li {
+            margin: 0 10px;
+        }
+
+        .social-media li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em; /* Adjust size as needed */
+        }
+
+        .social-media li a.facebook {
+            color: #1877f2; /* Facebook Blue */
+        }
+
+        .social-media li a.instagram {
+            color: #e4405f; /* Instagram Pink */
+        }
+
+        .social-media li a.twitter {
+            color: #1da1f2; /* Twitter Blue */
+        }
+
+        .social-media li a:hover {
+            color: #ddd; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/images/hero.jpg" alt="Travel Website Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destination-guides.html">Destination Guides</a></li>
+                <li><a href="itineraries.html">Itineraries</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Discover Your Next Adventure</h1>
+            <p>Explore the world's best destinations with our guides and itineraries.</p>
+            <a href="booking.html" class="cta-button">Travel Now</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Travel Website. All rights reserved.</p>
+        <ul class="social-media">
+            <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+        </ul>
+    </footer>
+
+    <script>
+        document.querySelector('.cta-button').addEventListener('click', function() {
+            alert('Get ready for your next adventure!');
+        });
+    </script>
+</body>
+</html>
